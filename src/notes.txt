@@ -1,3 +1,12 @@
 Monster Reolodex
 
     when to render or rerender the webpage parts is an ultimate goal
+
+function return AJAX
+class render the returned AJAX
+
+define state in constructor
+
+change state with setState for shallow merge
+
+change state properly with nested objects for rendering
