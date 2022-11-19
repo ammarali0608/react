@@ -1,0 +1,3 @@
+Monster Reolodex
+
+    when to render or rerender the webpage parts is an ultimate goal
