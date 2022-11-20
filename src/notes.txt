@@ -23,6 +23,10 @@ add an id
 puropse of key of we have to update one value, that key value pair should be changes not all 
 
 
+SPA - single page application
+A single-page application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current web page with new data ...
+
+
 
 ////
 
