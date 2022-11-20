@@ -7,15 +7,43 @@ class App extends Component {
     super();
 
     this.state = {
-      name: "Ammar Ali",
-      cast: "Noohani",
+      monsters: [
+        { id: 1, name: "Kohli" },
+        { id: 2, name: "Shaheen" },
+        { id: 3, name: "Butler" },
+      ],
     };
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <h1>{this.state.monster1.name}</h1>
+        <h1>{this.state.monster2.name}</h1>
+        <h1>{this.state.monster3.name}</h1>
+
+        What if we have million records 
+        
+        with array mapping
+        */}
+
+        {this.state.monsters.map((monster) => {
+          return (
+            <div key={monster.id}>
+              <h1>{monster.name}</h1>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+}
+
+export default App;
+
+/*
+  21 - 31
+  <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             this is {this.state.name} {this.state.cast}
@@ -43,10 +71,6 @@ class App extends Component {
             Learn React
           </a>
         </header>
-        s
-      </div>
-    );
-  }
-}
 
-export default App;
+    
+*/

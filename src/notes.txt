@@ -10,3 +10,23 @@ define state in constructor
 change state with setState for shallow merge
 
 change state properly with nested objects for rendering
+
+this.setState(function update, callbask function)
+
+if we have million states then what
+save in array
+do it with map function with return
+
+each child should have unique  key
+add an id
+
+puropse of key of we have to update one value, that key value pair should be changes not all 
+
+
+
+////
+
+git add -A
+git commit -m "day1"
+git branch -M main 
+git push -u origin main
