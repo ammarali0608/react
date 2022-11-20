@@ -48,3 +48,7 @@ class App extends Component {
 }
 
 export default App;
+//first the constructor will be called
+// then the render function
+// last didcomponentmount will be
+// after changing state the ui will be rerendered
