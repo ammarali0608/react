@@ -8,19 +8,14 @@ class App extends Component {
 
     this.state = {
       monsters: [],
+      searchField: "",
     };
     console.log("constructor");
   }
-  // When do I get the list
-  // How do I get the list
-  // where to put the list
 
   componentDidMount() {
     console.log("componentDidMount");
 
-    // code will be executed whenever the component will mount
-    // it only happens once
-    // fetch for getting data from json api
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((users) =>
@@ -36,8 +31,10 @@ class App extends Component {
   }
 
   render() {
-    console.log("render");
-
+    const filteredMonsters = this.state.monsters.filter((monster) => {
+      console.log("render");
+      return monster.name.toLowerCase().includes(this.state.searchField);
+    });
     return (
       <div className="App">
         <input
@@ -46,18 +43,13 @@ class App extends Component {
           placeholder="search monster"
           onChange={(event) => {
             const searchString = event.target.value.toLowerCase();
-            console.log(searchString);
-            const filteredMonsters = this.state.monsters.filter((monster) => {
-              return monster.name.toLowerCase().includes(searchString);
-            });
-            console.log(filteredMonsters);
 
             this.setState(() => {
-              return { monsters: filteredMonsters };
+              return { searchField: searchString };
             });
           }}
         />
-        {this.state.monsters.map((monster) => {
+        {filteredMonsters.map((monster) => {
           return (
             <div key={monster.id}>
               <h1>{monster.name}</h1>
@@ -70,7 +62,3 @@ class App extends Component {
 }
 
 export default App;
-//first the constructor will be called
-// then the render function
-// last didcomponentmount will be
-// after changing state the ui will be rerendered
