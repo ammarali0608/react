@@ -4,9 +4,17 @@ class CardList extends Component {
   render() {
     // you can't return multiple componetents from one component on same level
     // but you can return one contains multiple components
+
+    const { monsters } = this.props;
     return (
       <div>
-        <h1>Hello I am CardList Component</h1>
+        {monsters.map((monster) => {
+          return (
+            <div key={monster.id}>
+              <h1>{monster.name}</h1>
+            </div>
+          );
+        })}
       </div>
     );
   }
