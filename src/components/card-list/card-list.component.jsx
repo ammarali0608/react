@@ -5,6 +5,8 @@ class CardList extends Component {
     // you can't return multiple componetents from one component on same level
     // but you can return one contains multiple components
 
+    // when props changed compontnt is also changed
+
     const { monsters } = this.props;
     return (
       <div>
