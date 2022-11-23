@@ -29,8 +29,9 @@ A single-page application (SPA) is a web application or website that interacts w
 
 
 ////
-
+git pull origin main
 git add -A
-git commit -m "day1"
+git commit -m "52 Monster Reolodex Finish Touches"
 git branch -M main 
 git push -u origin main
+
