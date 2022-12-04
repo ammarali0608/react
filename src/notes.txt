@@ -28,6 +28,16 @@ A single-page application (SPA) is a web application or website that interacts w
 
 
 
+Pure functions return the same output if we use the same input parameters. However, impure functions give different outcomes when we pass the same arguments multiple times.
+
+use cases is able to encapsulate the local state in a functional components
+
+
+
+
+
+
+
 ////
 git pull origin main
 git add -A

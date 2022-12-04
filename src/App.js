@@ -1,19 +1,26 @@
 // import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
 import { Component } from "react";
 import CardList from "./components/card-list/card-list.component";
 import SearchBox from "./components/search-box/search-box.component";
 
 const App = () => {
+  const [searchField, setSearchField] = useState(""); // [set,value]
+  console.log({ searchField });
+  const stateChange = (event) => {
+    const searchString = event.target.value.toLowerCase();
+    setSearchField(searchString);
+  };
   return (
     <div className="App">
       <h1 className="app-title">Monster Rolodex</h1>
-      {/* <SearchBox
-          onChangeHandler={stateChange}
-          placeholder="Search Monster"
-          className="search-box"
-        />
-        <CardList monsters={filteredMonsters} /> */}
+      <SearchBox
+        onChangeHandler={stateChange}
+        placeholder="Search Monster"
+        className="search-box"
+      />
+      {/* <CardList monsters={filteredMonsters} /> */}
     </div>
   );
 };
@@ -36,14 +43,7 @@ const App = () => {
 //         })
 //       );
 //   }
-//   // function optimization
-//   stateChange = (event) => {
-//     const searchString = event.target.value.toLowerCase();
-
-//     this.setState(() => {
-//       return { searchField: searchString };
-//     });
-//   };
+//    // function optimization
 
 //   render() {
 //     // values destruction
