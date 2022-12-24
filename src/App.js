@@ -7,7 +7,7 @@ import SearchBox from "./components/search-box/search-box.component";
 
 const App = () => {
   const [searchField, setSearchField] = useState(""); // [set,value]
-  console.log({ searchField });
+  console.log(searchField);
 
   const stateChange = (event) => {
     const searchString = event.target.value.toLowerCase();
