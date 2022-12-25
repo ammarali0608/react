@@ -32,6 +32,7 @@ Pure functions return the same output if we use the same input parameters. Howev
 
 use cases is able to encapsulate the local state in a functional components
 
+agian check
 
 
 
