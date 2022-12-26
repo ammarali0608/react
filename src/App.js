@@ -9,7 +9,7 @@ const App = () => {
   const [searchField, setSearchField] = useState(""); // [set,value]
   const [monsters, setMonsters] = useState([]);
   const [filteredMonsters, setFilteredMonsters] = useState(monsters);
-
+  console.log("rendered");
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
@@ -28,7 +28,6 @@ const App = () => {
     setSearchField(searchString);
   };
 
-  console.log(filteredMonsters);
   return (
     <div className="App">
       <h1 className="app-title">Monster Rolodex</h1>

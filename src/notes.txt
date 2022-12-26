@@ -35,6 +35,7 @@ use cases is able to encapsulate the local state in a functional components
 agian check
 
 
+React 18 Strict Mode renders twice for chacking any wierd behaviour 
 
 
 
