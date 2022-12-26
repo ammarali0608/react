@@ -11,9 +11,31 @@
     <script src="https://unpkg.com/react@18.0.0-rc.0/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18.0.0-rc.0/umd/react-dom.development.js"></script>
     <script>
+      const Person = (props) => {
+        return React.createElement("div", {}, [
+          React.createElement("h1", {}, props.name),
+          React.createElement("p", {}, props.occupation),
+        ]);
+      };
+
       const App = () => {
         return React.createElement("div", {}, [
           React.createElement("h1", { class: "title" }, "React is rendered"),
+          React.createElement(
+            Person,
+            { name: "Ammar Ali", occupation: "student" },
+            null
+          ),
+          React.createElement(
+            Person,
+            { name: "Yasir Ali", occupation: "Instructor" },
+            null
+          ),
+          React.createElement(
+            Person,
+            { name: "Sahil Khan", occupation: "student" },
+            null
+          ),
         ]);
       };
       ReactDOM.render(
