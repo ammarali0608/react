@@ -26,7 +26,7 @@ const App = () => {
 
   const stateChange = (event) => {
     const searchString = event.target.value.toLowerCase();
-    setSearchField(searchString);
+    setSearchField(searchString); 
   };
 
   const titleChange = (event) => {
